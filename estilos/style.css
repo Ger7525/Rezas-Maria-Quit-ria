@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+:root {
+
+    /* =========================
+       CORES PRINCIPAIS
+       ========================= */
+
+    --verde-jurema: #173B2A;
+    --verde-mata: #28533A;
+    --verde-folha: #4F6B3C;
+
+    /* =========================
+       CORES TERROSAS
+       ========================= */
+
+    --marrom-madeira: #6B4025;
+    --marrom-terra: #8A5A35;
+    --terracota: #A65F32;
+
+    /* =========================
+       DOURADOS
+       ========================= */
+
+    --dourado-antigo: #C59A45;
+    --ouro-claro: #D8B866;
+
+    /* =========================
+       FUNDOS CLAROS
+       ========================= */
+
+    --creme: #F3E7CF;
+    --pergaminho: #E5D2AE;
+
+    /* =========================
+       TEXTOS
+       ========================= */
+
+    --marrom-escuro: #241A12;
+    --font-titulo:"Cormorant Garamond", serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;                
+}
+body {
+    font-family: "EB Garamond", serif;
+    font-size: 18px;
+    line-height: 1.7;
+    background-color: var(--creme);
+    text-align: center;
+}
+/* =====================================================
+                    Cabeçalho
+   =====================================================
+*/
+header{
+    background-color: var(--verde-jurema); 
+    padding: 30px;
+    width: 100vw;  
+    height: auto; 
+          
+}
+.logo{
+   margin: 20px auto; 
+   text-align: center;  
+   width: 200px;             
+}
+.menu{
+   display:grid;
+   grid-template-columns: 1fr;
+   gap: 20px;
+
+}        
+         
+
+                 
+
+.menu  a {
+    text-decoration: none;   
+    color: var(--verde-jurema); 
+    background-color: var(--creme);
+    border: 1px solid var(--creme);  
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s;            
+}
+.menu a:hover{
+    background-color: var(--verde-jurema);  
+    color: var(--creme); 
+    transform: translateY(6px);             
+}
+
+/* =====================================================
+                    nav do sub menu
+   =====================================================
+*/
+.nav-sub{
+    display: grid;  
+    grid-template-columns: 1fr; 
+    gap: 20px;             
+    background-color: var(--verde-jurema); 
+    border-top: 2px solid var(--creme); 
+    padding: 30px; 
+    width: 100vw;
+    height: auto;             
+}
+.nav-sub a{
+          
+  
+    text-decoration: none; 
+    font-weight: bold;  
+    color: var(--creme); 
+    border: 1px solid var(--creme);  
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: all 0.3s;
+      
+}
+.nav-sub a:hover{
+   background-color: var(--creme);  
+   color: var(--verde-jurema);  
+   border: 1px solid var(--verde-mata); 
+   transform: translatey(-6px);            
+}
+/* =====================================================
+                    principal
+   =====================================================
+*/
+.container{
+   max-width: 80%;
+   margin: 30px auto 30px;
+   padding: 20px;
+   background-color: var(--pergaminho);
+   border:1px solid var(--marrom-escuro);
+   border-radius: 8px;
+   box-shadow: 0px 0px 4px var(--marrom-madeira);
+
+}
+section h1, h2{
+   color: var(--dourado-antigo); 
+   padding: 20px;
+   font-size: 1.7em;
+   font-family: var(--font-titulo);
+   text-shadow: 0px opx 6px var(--ouro-claro);                
+}
+section h3{
+   text-align: left;  
+   padding: 10px; 
+   color: var(--marrom-madeira);             
+}
+section p{
+   text-align: justify;
+   font-size: 0.90em;
+   text-indent: 40px;  
+   padding: 10px 0;  
+   color: var(--marrom-escuro);             
+}
+section a{
+   text-decoration: none;
+                   
+}
+section a span{
+      color: var(--verde-folha);
+      transition: all 0.3s;
+                   
+}
+section a span:hover{
+     color: var(--verde-jurema); 
+     transform: translatey(-6px);              
+}
+section ul{
+     margin-left: 40px; 
+     text-align: left;              
+}
+section ul li{
+     color: var(--marrom-madeira);               
+}
+/* =====================================================
+                    rodapé
+   =====================================================
+*/
+footer{
+    background-color: var(--verde-jurema);  
+    color: var(--creme);
+    font-size: 14px;
+    padding: 20px;         
+}
