@@ -39,11 +39,15 @@
     --marrom-escuro: #241A12;
     --font-titulo:"Cormorant Garamond", serif;
 }
-*{
+/* =====================================================
+                    Reset & Configurações Globais
+   ===================================================== */
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;                
+    box-sizing: border-box;            
 }
+
 body {
     font-family: "EB Garamond", serif;
     font-size: 18px;
@@ -51,140 +55,193 @@ body {
     background-color: var(--creme);
     text-align: center;
 }
+
 /* =====================================================
-                    Cabeçalho
-   =====================================================
-*/
-header{
+                    Cabeçalho & Logo
+   ===================================================== */
+header {
     background-color: var(--verde-jurema); 
-    padding: 30px;
-    width: 100vw;  
-    height: auto; 
-          
+    padding: 30px 20px;
+    width: 100%; /* Previne rolagem horizontal indesejada */
 }
-.logo{
-   margin: 20px auto; 
-   text-align: center;  
-   width: 200px;             
+
+.logo {
+    margin: 10px auto 25px; 
+    text-align: center;  
+    width: 180px;             
 }
-.menu{
-   display:grid;
-   grid-template-columns: 1fr;
-   gap: 20px;
 
-}        
-         
+/* =====================================================
+               Menus (Mobile First: Grid)
+   ===================================================== */
+.menu, 
+.nav-sub {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
 
-                 
+/* Centraliza o 7º botão sozinho na última linha no Mobile */
+.menu a:last-child
+ {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 50%; /* Mantém a proporção dos outros botões */
+}
 
-.menu  a {
+/* Estilização Harmônica dos Botões dos Menus */
+.menu a,
+.nav-sub a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;   
+    padding: 10px 18px;
+    border-radius: 4px;
+    
+    /* Tipografia Refinada e Harmônica */
+    font-family: "EB Garamond", serif;
+    font-size: 0.85em;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Cores do Menu Principal */
+.menu a {
     color: var(--verde-jurema); 
     background-color: var(--creme);
     border: 1px solid var(--creme);  
-    padding: 8px 16px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: all 0.3s;            
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
 }
-.menu a:hover{
+
+.menu a:hover {
     background-color: var(--verde-jurema);  
     color: var(--creme); 
-    transform: translateY(6px);             
+    transform: translateY(-3px); /* Flutuação suave para cima */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-/* =====================================================
-                    nav do sub menu
-   =====================================================
-*/
-.nav-sub{
-    display: grid;  
-    grid-template-columns: 1fr; 
-    gap: 20px;             
+/* Estilos Específicos do Sub-Menu */
+.nav-sub {
     background-color: var(--verde-jurema); 
-    border-top: 2px solid var(--creme); 
-    padding: 30px; 
-    width: 100vw;
-    height: auto;             
+    border-radius: 0px 0px 8px 8px;
+    padding: 20px ; 
+    width: 100%;
 }
-.nav-sub a{
-          
-  
-    text-decoration: none; 
-    font-weight: bold;  
+
+.nav-sub a {
     color: var(--creme); 
     border: 1px solid var(--creme);  
-    padding: 8px 16px;
-    border-radius: 5px;
-    transition: all 0.3s;
-      
+    background-color: transparent;
+    font-size: 14px;
 }
-.nav-sub a:hover{
-   background-color: var(--creme);  
-   color: var(--verde-jurema);  
-   border: 1px solid var(--verde-mata); 
-   transform: translatey(-6px);            
-}
-/* =====================================================
-                    principal
-   =====================================================
-*/
-.container{
-   max-width: 80%;
-   margin: 30px auto 30px;
-   padding: 20px;
-   background-color: var(--pergaminho);
-   border:1px solid var(--marrom-escuro);
-   border-radius: 8px;
-   box-shadow: 0px 0px 4px var(--marrom-madeira);
 
+.nav-sub a:hover {
+    background-color: var(--creme);  
+    color: var(--verde-jurema);  
+    border-color: var(--verde-mata);
+    transform: translateY(-3px);            
 }
-section h1, h2{
-   color: var(--dourado-antigo); 
-   padding: 20px;
-   font-size: 1.7em;
-   font-family: var(--font-titulo);
-   text-shadow: 0px opx 6px var(--ouro-claro);                
-}
-section h3{
-   text-align: left;  
-   padding: 10px; 
-   color: var(--marrom-madeira);             
-}
-section p{
-   text-align: justify;
-   font-size: 0.90em;
-   text-indent: 40px;  
-   padding: 10px 0;  
-   color: var(--marrom-escuro);             
-}
-section a{
-   text-decoration: none;
-                   
-}
-section a span{
-      color: var(--verde-folha);
-      transition: all 0.3s;
-                   
-}
-section a span:hover{
-     color: var(--verde-jurema); 
-     transform: translatey(-6px);              
-}
-section ul{
-     margin-left: 40px; 
-     text-align: left;              
-}
-section ul li{
-     color: var(--marrom-madeira);               
-}
+
 /* =====================================================
-                    rodapé
-   =====================================================
-*/
-footer{
+                    Conteúdo Principal
+   ===================================================== */
+.container {
+    max-width: 900px; /* Largura ideal de leitura para texto */
+    width: 90%;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--pergaminho);
+    border: 1px solid var(--marrom-escuro);
+    border-radius: 8px;
+    box-shadow: 0px 0px 6px var(--marrom-madeira);
+}
+
+section h1, 
+section h2 {
+    color: var(--dourado-antigo); 
+    padding: 20px 0 10px;
+    font-size: 1.7em;
+    font-family: var(--font-titulo);
+    text-shadow: 0px 0px 6px var(--ouro-claro); /* Corrigido de opx para 0px */               
+}
+
+section h3 {
+    text-align: left;  
+    padding: 15px 0 5px; 
+    color: var(--marrom-madeira);             
+}
+
+section p {
+    text-align: justify;
+    font-size: 0.95em;
+    text-indent: 40px;  
+    padding: 10px 0;  
+    color: var(--marrom-escuro);             
+}
+
+section a {
+    text-decoration: none;
+}
+
+section a span {
+    color: var(--verde-folha);
+    transition: color 0.3s ease;
+}
+
+section a span:hover {
+    color: var(--verde-jurema); 
+}
+
+section ul {
+    margin-left: 40px; 
+    text-align: left;              
+}
+
+section ul li {
+    color: var(--marrom-madeira); 
+    padding: 4px 0;             
+}
+
+/* =====================================================
+                    Rodapé
+   ===================================================== */
+footer {
     background-color: var(--verde-jurema);  
     color: var(--creme);
     font-size: 14px;
-    padding: 20px;         
+    padding: 25px 20px;         
+}
+
+/* =====================================================
+        Tablet & Desktop (Lado a lado fluido)
+   ===================================================== */
+@media screen and (min-width: 768px) {
+    .menu, 
+    .nav-sub {
+        display: flex; /* Flexbox alinha todos lado a lado na mesma linha */
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    }
+
+    /* Reseta a regra de centralização do último filho do mobile */
+    .menu a:last-child,
+    .nav-sub a:last-child {
+        grid-column: auto;
+        width: auto;
+    }
+
+    .menu a,
+    .nav-sub a {
+        font-size: 0.9em;
+        padding: 10px 22px;
+    }
 }
