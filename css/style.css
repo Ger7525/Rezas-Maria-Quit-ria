@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+:root {
+  /* ==========================================================================
+     1. CORES DE FUNDO (BACKGROUNDS)
+     ========================================================================== */
+  /* Usar no fundo principal da página (body/container central) para alinhar com o creme da imagem */
+  --bg-primary: #f4eae1;
+
+  /* Usar no fundo de cards, caixas de destaque ou popups */
+  --bg-surface: #efe5d8;
+
+  /* Usar no fundo do Rodapé (Footer) ou Cabeçalho (Header) */
+  --bg-dark: #1a3c54;
+
+
+  /* ==========================================================================
+     2. CORES DE TEXTO (TYPOGRAPHY)
+     ========================================================================== */
+  /* Usar nos títulos principais (H1, H2, H3) e parágrafos sobre o fundo creme central */
+  --text-primary: #1a3c54;
+
+  /* Usar em subtítulos (H4, H5), legendas, datas ou textos secundários */
+  --text-secondary: #5c3219;
+
+  /* Usar em textos sobre fundos escuros (como o rodapé ou botões coloridos) */
+  --text-light: #ffffff;
+
+
+  /* ==========================================================================
+     3. BOTÕES E ELEMENTOS INTERATIVOS (CALL TO ACTION / LINKS)
+     ========================================================================== */
+  /* Usar no fundo do Botão Principal (Ex: "Matricule-se", "Inscreva-se", "Saiba Mais") */
+  --btn-primary-bg: #b25031;
+  --btn-primary-text: #ffffff;
+
+  /* Usar ao passar o mouse (hover) sobre o botão principal */
+  --btn-primary-hover: #a64b2e;
+
+  /* Usar no fundo de Botões Secundários ou tags de categoria */
+  --btn-secondary-bg: #4c6a43;
+  --btn-secondary-text: #ffffff;
+
+  /* Usar na cor de links soltos no meio do texto */
+  --link-color: #b25031;
+  --link-hover: #4c6a43;
+
+
+  /* ==========================================================================
+     4. DETALHES, BORDAS E ÍCONES
+     ========================================================================== */
+  /* Usar em linhas divisórias (hr), bordas de formulários ou cards */
+  --border-color: #5c3219;
+
+  /* Usar para destacar palavras-chave, estrelas de avaliação ou ícones especiais */
+  --accent-gold: #d89b48;
+
+  /* Usar para ícones de ervas, folhagens e detalhes da natureza */
+  --accent-green: #4c6a43;
+
+  /* Títulos impactantes e esculpidos */
+  --font-title: 'Eczar', serif; 
+  /* Leitura confortável para textos longos de rezas e ensinamentos */
+  --font-body: 'Lora', serif;
+}
